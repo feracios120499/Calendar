@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="560">
     <Grid>
-        
+        <TreeView x:Name="treeView" HorizontalAlignment="Left" Height="311" Margin="10,0,0,0" VerticalAlignment="Top" Width="143">
+            <TreeViewItem Header="Зима">
+                <TreeViewItem Header="Декабрь" Tag="12" Uid="12" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Январь" Tag="1" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Февраль" Tag="2" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Весна">
+                <TreeViewItem Header="Март" Tag="3" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Апрель" Tag="4" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Май" Tag="5" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Лето">
+                <TreeViewItem Header="Июнь" Tag="6" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Июль" Tag="7" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Август" Tag="8" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Осень">
+                <TreeViewItem Header="Сентябрь" Tag="9" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Октябрь" Tag="10" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Ноябрь" Tag="11" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="297" Margin="158,14,-0.4,0" VerticalAlignment="Top" Width="396">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Monday" Width="50" DisplayMemberBinding="{Binding Monday}" />
+                    <GridViewColumn Header="Tuesday" Width="50" DisplayMemberBinding="{Binding Tuesday}" />
+                    <GridViewColumn Header="Wednesday" Width="50" DisplayMemberBinding="{Binding Wednesday}" />
+                    <GridViewColumn Header="Thursday" Width="50" DisplayMemberBinding="{Binding Thursday}" />
+                    <GridViewColumn Header="Friday" Width="50" DisplayMemberBinding="{Binding Friday}" />
+                    <GridViewColumn Header="Saturday" Width="50" DisplayMemberBinding="{Binding Saturday}" />
+                    <GridViewColumn Header="Sunday" Width="50" DisplayMemberBinding="{Binding Sunday}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>
